@@ -14,7 +14,7 @@ header{
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  height: 55px;
+  min-height: 55px;
   position: fixed;
   top: 0;
   left: 0;
@@ -159,9 +159,17 @@ main .viedo-grid .video-info .video-stats .video-title{
   font-size: 16px;
   font-weight: bold;
 }
+@media(max-width:960px){
+  .viedo-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+}
 @media(max-width:800px){
  header{
   flex-direction: column;
+ }
+ .viedo-grid{
+  grid-template-columns: 1fr 1fr;
  }
  .middle-section{
     max-width: 200px;
@@ -169,4 +177,9 @@ main .viedo-grid .video-info .video-stats .video-title{
  .middle-section .fa-microphone-lines{
   display: none;
  }
+}
+@media(max-width:500px){
+  .viedo-grid{
+    grid-template-columns: 1fr;
+   }
 }
